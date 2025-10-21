@@ -1,18 +1,35 @@
 <div class="dayContent">
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/" ></ion-back-button>
-    </ion-buttons>
-    <ion-title>Tag {{ dayNumber }}</ion-title>
-  </ion-toolbar>
-</ion-header>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Tag {{ dayNumber }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
   <div class="content">
 
-    <h2 id = "titel"> {{ content?.titel }}</h2>
-    <p [innerHTML]="(content?.gedicht ? content!.gedicht : '') | lineBreak" id = "gedicht"></p>
-    <p id="autor"> {{ content?.autor}}</p>
+    @if (this.type == ContentType.Gedicht) {
+      <h2 class="titel"> {{ gedicht?.titel }}</h2>
+      <p [innerHTML]="(gedicht?.gedicht ? gedicht!.gedicht : '') | lineBreak" id="gedicht"></p>
+      <p id="autor"> {{ gedicht?.autor }}</p>
+    } @else if (this.type == ContentType.Raetsel) {
+      <h2 class="titel"> Ein kleines Streichholz Rätsel</h2>
+      <p [innerHTML]="(raetsel?.frage ? raetsel!.frage : '')   | lineBreak"></p>
+      <img [src]="raetsel?.frage_bild_path" [alt]="raetsel?.frage_bild_alt">
+      <ion-button
+        (click)="solutionVisible = !solutionVisible">{{ solutionVisible ? "Lösung einklappen" : "Lösung anzeigen" }}
+      </ion-button>
+      @if (solutionVisible) {
+        <div>
+          <p [innerHTML]="(raetsel?.loesung ? raetsel!.loesung : '')   | lineBreak"></p>
+          <img [src]="raetsel?.loesung_bild_path" [alt]="raetsel?.loesung_bild_alt">
+        </div>
+      }
+
+    }
+
   </div>
 
 </div>
