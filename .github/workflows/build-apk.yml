@@ -32,22 +32,22 @@ jobs:
 
       - name: Install app dependencies
         run: npm install
-        working-directory: ./meteo-app
+        working-directory: ./adventskalender-app
 
       - name: Build Ionic App
         run: ionic build
-        working-directory: ./meteo-app
+        working-directory: ./adventskalender-app
 
       - name: ionic add android
         run: ionic cap add android
-        working-directory: ./meteo-app
+        working-directory: ./adventskalender-app
 
       - name: Build Android Dev APK
         run: ionic capacitor build android
-        working-directory: ./meteo-app
+        working-directory: ./adventskalender-app
 
       - name: Generate the Android App Bundle for debug
-        working-directory: ./meteo-app/android/
+        working-directory: ./adventskalender-app/android/
         run: ./gradlew assembleDebug
 
       - name: Save bundle as artifact
@@ -55,4 +55,4 @@ jobs:
         with:
           name: app-bundle
           path: |
-            ${{ github.workspace }}/meteo-app/android/app/build/outputs/apk/debug/*.apk
+            ${{ github.workspace }}/adventskalender-app/android/app/build/outputs/apk/debug/*.apk

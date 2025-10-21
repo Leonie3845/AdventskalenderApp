@@ -1,4 +1,4 @@
-# MeteoApp
+# Adventskalender App
 
 ## install apk on your android device
 In github, download app-bundle.zip, extract it and transfer the apk to your device. 
@@ -10,21 +10,6 @@ On your Android phone:
 
 Then it can be installed.
 
-
-## Research and available Apis
-
-### Open-meteo
-
-https://open-meteo.com/en/docs/dwd-api?hourly=temperature_2m,precipitation
-
-Example Api:
-https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m,precipitation&models=icon_seamless
-
-- damit starten.
-
-### For Bodendruck Karten:
-
-- noch herausfinden.
 
 ## Setup of dev environment
 You need node, npm and ionic installed
