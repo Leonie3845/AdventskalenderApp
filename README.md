@@ -16,6 +16,7 @@ You need node, npm and ionic installed
 
 to run it locally:
 ```
+cd adventskalender-app
 ionic serve
 ```
 
