@@ -1,1 +1,19 @@
-<h1>Day {{ dayNumber }}</h1>
+<div class="dayContent">
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Tag {{ dayNumber }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+  <div class="content">
+
+    <h2 id = "titel"> {{ content?.titel }}</h2>
+    <p [innerHTML]="(content?.gedicht ? content!.gedicht : '') | lineBreak" id = "gedicht"></p>
+    <p id="autor"> {{ content?.autor}}</p>
+  </div>
+
+</div>
+

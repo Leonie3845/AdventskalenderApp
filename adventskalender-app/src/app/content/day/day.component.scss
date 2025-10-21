@@ -1,0 +1,28 @@
+.dayContent {
+  position: static !important;
+  overflow: scroll;
+}
+ion-title {
+  padding-top: 0.25em;
+}
+
+.content {
+  padding: 1em;
+
+}
+
+#autor {
+  font-size: 0.75em;
+  font-style: italic;
+  padding-top: 2em;
+  text-align: right;
+}
+
+#gedicht {
+  text-align: center;
+  line-height: 1.5em;
+}
+
+#titel {
+  text-align: center;
+}
