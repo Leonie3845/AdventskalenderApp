@@ -1,4 +1,7 @@
 import { Routes } from '@angular/router';
+import {DayComponent} from "./content/day/day.component";
+
+
 
 export const routes: Routes = [
   {
@@ -10,4 +13,6 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
+  { path: ':id', component: DayComponent },
+
 ];
