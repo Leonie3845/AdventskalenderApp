@@ -1,0 +1,34 @@
+{
+  "2": {
+    "frage": "Durch Verlegen von zwei Streichhölzern, ergeben sich drei gleiche Dreiecke! Welche zwei Streichhölzer müssen bei diesem Rätsel bewegt werden?",
+    "loesung": "Die Lösung zum Streichholzspiel",
+    "frage_bild_path": "assets/images/streichholzspiel01.jpg",
+    "frage_bild_alt": "Es liegen 6 Streichhölzer in einem Dreieck. Jede Dreiecksseite besteht aus 2 Streichhölzern. in der Mitte des Dreiecks liegt ein weiteres Streichhold das mit zwei Streichhölzern einer Spitze des Dreiecks ein weiteres Dreieck bildet.",
+    "loesung_bild_path": "assets/images/streichholzspiel01-loesung.jpg",
+    "loesung_bild_alt": "Lösung: Die Spitze des Dreiecks wird nach innen geklappt. Dannach liegen zwei streichhölzer waagrecht nebeneinander. Über diesen bilden jeweils zwei Streichhölzer ein Dreieck mit ihnen. Die Spitzen dieser beiden Dreiecke werden von einem weitern Streichholz verbunden."
+  },
+  "22": {
+    "frage": "Lege zwei Streichhölzer so um, dass der blaue Ball sich nicht mehr auf / in der Schaufel befindet. \n\nDie Schaufel einfach nur mit der Öffnung nach unten zu drehen, ist keine richtige Lösung!",
+    "loesung": "Das mittlere Streichholz wird ein Stück nach unten geschoben und das Streichholz von links oben kommt nach unten rechts.",
+    "frage_bild_path": "assets/images/streichholzspiel02.jpg",
+    "frage_bild_alt": "In der Mitte befindet sich ein blauber Ball. Um den blauen Ball sind drei Streichhölzer in einem Quadrat gelegt, das auf der linken Seite offen ist. Auf der rechten Seite liegt ein weiteres Streichholz horizontal auf mittlerer Höhe des linkes Streichholzes des offenen Quadrats. Die Streichhölzer bilden die Form einer Schaufel.",
+    "loesung_bild_path": "assets/images/streichholzspiel02-loesung.jpg",
+    "loesung_bild_alt": "Die Schaufel aus dem vorherigen Bild ist nun gespiegelt und schaut in die andere Richtung."
+  },
+  "12": {
+    "frage": "Der Esel: Lege ein Streichholz so um, dass der Esel in die andere Richtung schaut.",
+    "loesung": "Das äußere Streichholz wird nach unten gelegt, und schon schaut der Esel nach oben statt nach rechts. Die Lösung sieht auf den ersten Blick vielleicht ein wenig verwirrend aus, stimmt aber!",
+    "frage_bild_path": "assets/images/streichholzspiel03.jpg",
+    "frage_bild_alt": "5 Streichhölzer bilden einen Esel. Drei sind zu einem nach unten offenen Quadrat gelegt. Das vierte Streichholz dient als Hals des Esels und ist von der oberen rechten Ecke des offenen Quadrats schief nach oben gelegt. Das fünfte Streichholz liegt rechtwinkling und mittig zum Hals des Esels. ",
+    "loesung_bild_path": "assets/images/streichholzspiel03-loesung.jpg",
+    "loesung_bild_alt": "Das linke Streichholz des nach unten offenen Quadrats wird so verschoben, das es nun dort liegt, wo vorher die offene Stelle im Quadrat war. Der Esel schaut nun nach oben und in die andere Richtung."
+  },
+  "8": {
+    "frage": "Der Fisch:  Lege drei Streichhölzer so um, dass der Fisch in die andere Richtung schaut.",
+    "loesung": "Die oberen drei Streichhölzer werden nach unten gelegt, und schon schaut der Fisch in die andere Richtung!",
+    "frage_bild_path": "assets/images/streichholzspiel04.jpg",
+    "frage_bild_alt": "8 Streichhölzer bilden einen Fisch. Vier Streichhölzer bilden ein < Zeichen, jede Seite besteht aus zwei Streichhölzern. Die anderen 4 Streichhölzer bilden ein x, die linke seite des x trifft jeweils genau die Zwischenräume der Streichölzer auf einer Seite des < Zeichens.",
+    "loesung_bild_path": "assets/images/streichholzspiel04-loesung.jpg",
+    "loesung_bild_alt": "Die oberen zwei Streichhölzer des < und der rechte obere Arm des x werden verlegt."
+  }
+}
