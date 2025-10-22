@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {map, Observable} from "rxjs";
-import {Gedicht} from "../content/day/day.component";
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +9,7 @@ export class Content {
   private readonly jsonUrlGedichtContent = 'assets/content/text-content.json';
   private readonly jsonUrlContentTypMapping = 'assets/content/content-type-mapping.json';
   private readonly jsonUrlRaetselUrl = 'assets/content/raetsel-content.json'
+  private readonly jsonUrlRezeptContent = 'assets/content/rezept-content.json'
 
   constructor(private http: HttpClient) {
   }
@@ -25,6 +25,11 @@ export class Content {
       map(data => data[dayNumber] || undefined)
     );
   }
+  getDayRezept(dayNumber: number): Observable<Rezept | undefined> {
+    return this.http.get<Record<string, Rezept>>(this.jsonUrlRezeptContent).pipe(
+      map(data => data[dayNumber] || undefined)
+    );
+  }
 
   getDayRaetsel(dayNumber: number): Observable<Raetsel | undefined> {
     return this.http.get<Record<string, Raetsel>>(this.jsonUrlRaetselUrl).pipe(
@@ -33,16 +38,35 @@ export class Content {
   }
 }
 
+
 export enum ContentType {
   Gedicht = "Gedicht",
-  Raetsel = "Raetsel"
+  Raetsel = "Raetsel",
+  Rezept = "Rezept"
 }
 
-export type Raetsel = {
+export type Raetsel =  {
   frage: string,
   loesung: string,
   frage_bild_path: string,
   frage_bild_alt: string,
   loesung_bild_path: string,
   loesung_bild_alt: string
+}
+
+export type Gedicht =  {
+  titel: string,
+  autor: string,
+  gedicht: string,
+  background_path?: string
+  background_position?: string
+}
+
+export type Rezept = {
+  titel: string,
+  link: string,
+  zutaten: string,
+  zubereitung: string,
+  background_path?: string
+  background_position?: string
 }
