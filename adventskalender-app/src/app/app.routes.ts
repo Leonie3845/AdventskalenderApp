@@ -1,6 +1,6 @@
-import { Routes } from '@angular/router';
+import {Routes} from '@angular/router';
 import {DayComponent} from "./content/day/day.component";
-
+import {dayAccessGuard} from "./guards/day-access-guard";
 
 
 export const routes: Routes = [
@@ -13,6 +13,6 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
-  { path: ':id', component: DayComponent },
+  {path: ':id', component: DayComponent, canActivate: [dayAccessGuard]},
 
 ];
