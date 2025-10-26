@@ -1,0 +1,27 @@
+{
+  "4": {
+    "titel": "Bob Ross Painting Tutorial",
+    "beschreibung": "Suchst du noch eine Beschäftigung für lange dunkle Winterabende?",
+    "embedded_video": "https://www.youtube.com/embed/mT0RNrTDHkI?si=cuMmZZDDL2j7JLIp",
+    "background_path": "assets/background/background_16_export.svg",
+    "background_position": "right"
+  },
+  "9": {
+    "titel": "Schneeflocke falten",
+    "beschreibung": "Suchst du noch eine Beschäftigung für lange dunkle Winterabende?",
+    "embedded_video": "https://www.youtube.com/embed/gd16lzklXUM?si=FlagGNA4Eyd-GoOT",
+    "background_path": "assets/background/background_7_export.svg"
+  },
+  "17": {
+    "titel": "Fröbel Sterne basteln",
+    "beschreibung": "Suchst du noch eine Beschäftigung für lange dunkle Winterabende?",
+    "embedded_video": "https://www.youtube.com/embed/XSD1NHYCCgc?si=IjreFupXqqW8kWUc",
+    "background_path": "assets/background/background_4_export.svg"
+  },
+  "19": {
+    "titel": "Blumen Pop-Up Karte basteln",
+    "beschreibung": "Suchst du noch eine Beschäftigung für lange dunkle Winterabende?",
+    "embedded_video": "https://www.youtube.com/embed/a2rxjPPIwkI?si=tBkOj3J2nczreTQr",
+    "background_path": "assets/background/background_3_export.svg"
+  }
+}
