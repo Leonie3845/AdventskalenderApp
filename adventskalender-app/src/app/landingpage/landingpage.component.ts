@@ -1,32 +1,54 @@
-import {AfterViewInit, Component, ElementRef} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, inject} from '@angular/core';
 import {Router} from "@angular/router";
+import {IonToast} from "@ionic/angular/standalone";
+
 
 @Component({
   selector: 'app-landingpage',
   templateUrl: './landingpage.component.html',
   styleUrls: ['./landingpage.component.scss'],
+  imports: [
+    IonToast
+  ],
   standalone: true
 })
 export class LandingpageComponent implements AfterViewInit {
 
-  constructor(private el: ElementRef, private router: Router) {
-  }
+  el: ElementRef = inject(ElementRef);
+  router: Router = inject(Router)
+
+  isAlertOpen: boolean = false;
+  dayClicked: number = 0;
+
 
   ngAfterViewInit() {
     const paths = this.el.nativeElement.querySelectorAll('svg path[id]');
     paths.forEach((path: SVGPathElement) => {
-      path.addEventListener('click', () => {
-        const id = path.getAttribute('id');
-        if (id) {
-          let day;
-          if (id.startsWith("path_n_")) {
-            day = id.split("path_n_")[1]
-          } else if (id.startsWith("path-")) {
-            day = id.split("path-")[1]
-          }
-          this.router.navigate([`/${day}`]);
+      const id = path.getAttribute('id');
+      const today = new Date().getDate();
+      if (id) {
+        let day: number = 0;
+        if (id.startsWith("path_n_")) {
+          day = id.split("path_n_")[1] as unknown as number;
+        } else if (id.startsWith("path-")) {
+          day = id.split("path-")[1] as unknown as number;
         }
-      });
+        //add styling
+        if (day > today) {
+          path.addEventListener('click', () => {
+            this.isAlertOpen = true;
+            this.dayClicked = day;
+          });
+        }
+
+        //add interactivity
+        if (day <= today) {
+          path.addEventListener('click', () => {
+            this.router.navigate([`/${day}`]);
+
+          });
+        }
+      }
     });
   }
 
