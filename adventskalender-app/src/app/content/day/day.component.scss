@@ -1,15 +1,16 @@
 .dayContent {
-  position: static !important;
+  //position: static !important;
   overflow: scroll;
+  min-height: 100%;
 }
 
-ion-title {
-  padding-top: 1em;
-}
 
 .content {
   padding: 1em;
   text-align: center;
+  min-height: 100%;
+ background-repeat: no-repeat;
+  background-size: auto 100%;
 
 }
 

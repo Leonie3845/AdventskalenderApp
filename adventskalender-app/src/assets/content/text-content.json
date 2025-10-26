@@ -2,21 +2,30 @@
   "1": {
     "titel": "Gemeinsam",
     "gedicht": "Vergesset nicht\nFreunde\nwir reisen gemeinsam\n\nbesteigen Berge\npflücken Himbeeren\nlassen uns tragen\nvon den vier Winden\n\nVergesset nicht\nes ist unsre\ngemeinsame Welt\ndie ungeteilte\nach die geteilte\n\ndie uns aufblühen läßt\ndie uns vernichtet\ndiese zerrissene\nungeteilte Erde\nauf der wir\ngemeinsam reisen",
-    "autor": "Rose Ausländer"
+    "autor": "Rose Ausländer",
+    "background_path": "assets/background/background_1_export.svg"
+
   },
   "6": {
     "titel": "Knecht Ruprecht",
     "gedicht": "Von drauß vom Walde komm ich her.\nIch muß Euch sagen es weihnachtet sehr!\nÜberall auf den Tannenspitzen\nsah ich goldene Lichtlein blitzen.\nund droben aus dem Himmelstor\nsah mit großen Augen das Christkind hervor.\n\nUnd wie ich so strolcht durch den finsteren Tann,\nda rief’s mich mit heller Stimme an:\nKnecht Rupprecht, rief es alter Gesell,\nhebe die Beine und spute dich schnell.\n\nDie Kerzen fangen zu brennen an,\ndas Himmelstor ist aufgetan.\n\nAlt und Junge sollen nun\nvon der Jagd des Lebens einmal ruhn.\nund morgen flieg ich hinab zur Erden,\ndenn es soll wieder weihnachten werden!\n\nIch sprach: O lieber Herre Christ,\nMeine Reise fast zu Ende ist.\n\nIch soll nur noch in diese Stadt,\nWo’s eitel gute Kinder hat.\nHast denn das Säcklein auch bei dir?\nIch sprach: Das Säcklein, das ist hier,\nDenn Äpfel, Nuß und Mandelkern\nessen fromme Kinder gern.\n\nHast denn die Rute auch bei dir?\nIch sprach: die Rute die ist hier.\nDoch für die Kinder, nur die schlechten,\ndie trifft sie auf den Teil, den rechten.\n\nChristkindlein sprach: So ist es recht.\nSo geh mit Gott, mein treuer Knecht!\n\nVon drauß, vom Walde komm ich her,\nIch muß euch sagen es weihnachtet sehr!\nNun sprecht wie ich’s herinnen find:\nsind’s gute Kind, sind’s böse Kind?",
-    "autor": "Theodor Storm"
+    "autor": "Theodor Storm",
+    "background_path": "assets/background/background_2_export.svg"
   },
   "10": {
     "titel": "Lyrik am Bahngleis, Karlsruher Hauptbahnhof Gleis 1",
     "gedicht": "Ich bin ein Individum.\nWeit mehr als jede ausgedachte Figur aus irgendeiner Erzählung.\nIch atme. Ich Fühle. Ich Lebe. Und das jeden Tag.\nIch esse. Ich arbeite. Ich schlafe. Ich bin wie Du.\nIch renne. Ich springe. Ich klettere und fliehe. Ich stelle mich. Ich schreie.\nIch erschaffe und zerstöre. Ich mache das, weil ich es machen kann.\n Und das mein Leben lang.",
-    "autor": "Matthias Wermke und Mischa Leinkauf"
+    "autor": "Matthias Wermke und Mischa Leinkauf",
+    "background_path": "assets/background/background_5_export.svg",
+    "background_position": "right"
+
+
   },
   "14": {
     "titel": "Der Nussknacker",
     "gedicht": " Wer knackt die Nuss?\nNicht der Fritz, nicht der Franz.\nWer kriegt sie entzwei?\nDer Nussknacker kann’s!\n\nGut, dass wir ihn haben,\nden hölzernen Herrn.\nEr zerbeißt die Schale\nund schenkt uns den Kern.",
-    "autor": "Josef Guggenmos"
+    "autor": "Josef Guggenmos",
+    "background_path": "assets/background/background_12_export.svg"
+
   }
 }

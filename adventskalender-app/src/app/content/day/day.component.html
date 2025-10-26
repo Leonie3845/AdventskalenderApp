@@ -1,4 +1,4 @@
-<div class="dayContent">
+<div class="dayContent"  >
   <ion-header>
     <ion-toolbar>
       <ion-buttons slot="start">
@@ -8,14 +8,22 @@
     </ion-toolbar>
   </ion-header>
 
-  <div class="content">
+  <div class="content"
+       [ngStyle]="{
+       'background-image': 'url(./' + backgroundImage + ')',
+       'background-position': backgroundPosition
+
+  }"
+  >
 
     @if (this.type == ContentType.Gedicht) {
-      <h2 class="titel"> {{ gedicht?.titel }}</h2>
+      <h1 class="titel"> {{ gedicht?.titel }}</h1>
       <p [innerHTML]="(gedicht?.gedicht ? gedicht!.gedicht : '') | lineBreak" id="gedicht"></p>
       <p id="autor"> {{ gedicht?.autor }}</p>
-    } @else if (this.type == ContentType.Raetsel) {
-      <h2 class="titel"> Ein kleines Streichholz Rätsel</h2>
+    }
+
+    @else if (this.type == ContentType.Raetsel) {
+      <h1 class="titel"> Ein kleines Streichholz Rätsel</h1>
       <p [innerHTML]="(raetsel?.frage ? raetsel!.frage : '')   | lineBreak"></p>
       <img [src]="raetsel?.frage_bild_path" [alt]="raetsel?.frage_bild_alt">
       <ion-button
@@ -27,6 +35,14 @@
           <img [src]="raetsel?.loesung_bild_path" [alt]="raetsel?.loesung_bild_alt">
         </div>
       }
+    }
+    @else if (this.type == ContentType.Rezept) {
+      <h1 class="titel">{{this.rezept?.titel}}</h1>
+      <h2>Zutaten:</h2>
+      <p [innerHTML]="(rezept?.zutaten ? rezept!.zutaten : '')   | lineBreak"></p>
+      <h2>Zubereitung:</h2>
+      <p [innerHTML]="(rezept?.zubereitung ? rezept!.zubereitung : '')   | lineBreak"></p>
+      <a [href]="rezept?.link">Externer Link: Orginales Rezept</a>
 
     }
 
