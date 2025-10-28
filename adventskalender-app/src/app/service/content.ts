@@ -10,6 +10,8 @@ export class Content {
   private readonly jsonUrlContentTypMapping = 'assets/content/content-type-mapping.json';
   private readonly jsonUrlRaetselUrl = 'assets/content/raetsel-content.json'
   private readonly jsonUrlRezeptContent = 'assets/content/rezept-content.json'
+  private readonly jsonUrlVideoContent = 'assets/content/video-content.json'
+
 
   constructor(private http: HttpClient) {
   }
@@ -36,13 +38,27 @@ export class Content {
       map(data => data[dayNumber] || undefined)
     );
   }
+  getDayVideo(dayNumber: number): Observable<Video | undefined> {
+    return this.http.get<Record<string, Video>>(this.jsonUrlVideoContent).pipe(
+      map(data => data[dayNumber] || undefined)
+    );
+  }
 }
 
 
 export enum ContentType {
   Gedicht = "Gedicht",
   Raetsel = "Raetsel",
-  Rezept = "Rezept"
+  Rezept = "Rezept",
+  Video = "Video"
+}
+
+export type Video = {
+  titel: string,
+  beschreibung: string,
+  embedded_video: string,
+  background_path?: string
+  background_position?: string
 }
 
 export type Raetsel =  {

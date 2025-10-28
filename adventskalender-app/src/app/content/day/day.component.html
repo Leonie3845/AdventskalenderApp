@@ -44,6 +44,10 @@
       <p [innerHTML]="(rezept?.zubereitung ? rezept!.zubereitung : '')   | lineBreak"></p>
       <a [href]="rezept?.link">Externer Link: Orginales Rezept</a>
 
+    } @else if (this.type == ContentType.Video) {
+      <h1 class="titel">{{this.video?.titel}}</h1>
+      <p>{{this.video?.beschreibung}}</p>
+      <iframe width="100%" height="100%" [src]="this.safeUrl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     }
 
   </div>
