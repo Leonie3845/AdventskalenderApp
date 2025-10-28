@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, ElementRef, inject} from '@angular/core';
 import {Router} from "@angular/router";
-import {IonToast} from "@ionic/angular/standalone";
+import {IonContent, IonHeader, IonTitle, IonToast, IonToolbar} from "@ionic/angular/standalone";
 
 
 @Component({
@@ -8,7 +8,11 @@ import {IonToast} from "@ionic/angular/standalone";
   templateUrl: './landingpage.component.html',
   styleUrls: ['./landingpage.component.scss'],
   imports: [
-    IonToast
+    IonToast,
+    IonContent,
+    IonHeader,
+    IonTitle,
+    IonToolbar
   ],
   standalone: true
 })

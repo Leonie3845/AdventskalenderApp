@@ -1,5 +1,7 @@
 # Inhalts überblick
 
+onboarding screen: background 8
+
 | Tag | Typ     | background | details              |
 |-----|---------|------------|----------------------|
 | 1   | Gedicht | 1          |                      |
@@ -11,7 +13,7 @@
 | 7   | Rezept  | 15         |                      |
 | 8   | Rätsel  |            |                      |
 | 9   | Video   | 7          | Origimi schneeflocke |
-| 10  | Geicht  | 5          |                      |
+| 10  | Gedicht | 5          |                      |
 | 11  | Rezept  | 18         |                      |
 | 12  | Rätsel  |            |                      |
 | 13  |         |            |                      |

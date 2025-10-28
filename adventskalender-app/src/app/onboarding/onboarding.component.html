@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Adventskalender 2025</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <h2 class="ion-text-center ion-margin-top">
+    Benachrichtigungen für den Adventskalender
+  </h2>
+
+  <p class="ion-text-center ion-margin-bottom">
+    Wir werden dir jeden Tag eine Benachrichtigung schicken, damit du keinen Tag verpasst.
+  </p>
+
+  <ion-button expand="block" color="success" (click)="enableNotifications()">
+    Benachrichtigungen erlauben
+  </ion-button>
+
+  <ion-button fill="clear" color="medium" (click)="skip()">
+    Benachrichtigungen nicht erlauben
+  </ion-button>
+
+
+</ion-content>

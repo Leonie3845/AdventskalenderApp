@@ -5,7 +5,7 @@ import {map, Observable} from "rxjs";
 @Injectable({
   providedIn: 'root'
 })
-export class Content {
+export class ContentService {
   private readonly jsonUrlGedichtContent = 'assets/content/text-content.json';
   private readonly jsonUrlContentTypMapping = 'assets/content/content-type-mapping.json';
   private readonly jsonUrlRaetselUrl = 'assets/content/raetsel-content.json'
