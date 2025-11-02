@@ -27,6 +27,7 @@ export class ContentService {
       map(data => data[dayNumber] || undefined)
     );
   }
+
   getDayRezept(dayNumber: number): Observable<Rezept | undefined> {
     return this.http.get<Record<string, Rezept>>(this.jsonUrlRezeptContent).pipe(
       map(data => data[dayNumber] || undefined)
@@ -38,6 +39,7 @@ export class ContentService {
       map(data => data[dayNumber] || undefined)
     );
   }
+
   getDayVideo(dayNumber: number): Observable<Video | undefined> {
     return this.http.get<Record<string, Video>>(this.jsonUrlVideoContent).pipe(
       map(data => data[dayNumber] || undefined)
@@ -50,7 +52,8 @@ export enum ContentType {
   Gedicht = "Gedicht",
   Raetsel = "Raetsel",
   Rezept = "Rezept",
-  Video = "Video"
+  Video = "Video",
+  Snowforcast = "Snowforcast"
 }
 
 export type Video = {
@@ -61,7 +64,7 @@ export type Video = {
   background_position?: string
 }
 
-export type Raetsel =  {
+export type Raetsel = {
   frage: string,
   loesung: string,
   frage_bild_path: string,
@@ -70,7 +73,7 @@ export type Raetsel =  {
   loesung_bild_alt: string
 }
 
-export type Gedicht =  {
+export type Gedicht = {
   titel: string,
   autor: string,
   gedicht: string,
