@@ -1,10 +1,11 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {Content, ContentType, Gedicht, Raetsel, Rezept, Video} from "../../service/content";
+import {ContentService, ContentType, Gedicht, Raetsel, Rezept, Video} from "../../service/content/content.service";
 import {IonBackButton, IonButton, IonButtons, IonHeader, IonTitle, IonToolbar} from "@ionic/angular/standalone";
 import {LineBreakPipe} from "../../pipes/line-break-pipe";
 import {mergeMap, Observable, of} from "rxjs";
 import {NgStyle} from "@angular/common";
+import {NotificationService} from "../../service/notification/notification.service";
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 
 @Component({
@@ -29,9 +30,10 @@ export class DayComponent implements OnInit {
 
   solutionVisible: boolean = false;
 
-  contentService = inject(Content);
   route = inject(ActivatedRoute)
   sanitizer: DomSanitizer = inject(DomSanitizer);
+  contentService = inject(ContentService);
+  notificationService = inject(NotificationService)
 
   ngOnInit() {
     // Listen for changes in route params
@@ -73,6 +75,10 @@ export class DayComponent implements OnInit {
         this.backgroundPosition = this.video.background_position ?? this.backgroundPosition;
       }
     })
+
+    //cancel notification for this day
+    this.notificationService.cancelDayNotification(this.dayNumber);
+
   }
 
   protected readonly ContentType = ContentType;
