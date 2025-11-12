@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, ElementRef, inject} from '@angular/core';
 import {Router} from "@angular/router";
 import {IonContent, IonHeader, IonTitle, IonToast, IonToolbar} from "@ionic/angular/standalone";
+import {getDateToday} from "../shared/dev-date-change";
 
 
 @Component({
@@ -29,7 +30,7 @@ export class LandingpageComponent implements AfterViewInit {
     const paths = this.el.nativeElement.querySelectorAll('svg path[id]');
     paths.forEach((path: SVGPathElement) => {
       const id = path.getAttribute('id');
-      const today = new Date().getDate();
+      const today = getDateToday();
       if (id) {
         let day: number = 0;
         if (id.startsWith("path_n_")) {

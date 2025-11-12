@@ -1,0 +1,53 @@
+
+button {
+  background-color: unset;
+  color: var(--ion-text-color);
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+
+.chart-container > div {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  height: 10rem;
+  padding: 0.5rem;
+}
+
+ion-popover {
+  --width: 90%;
+  background-color: rgba(1, 250, 183, 0.51);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+
+  ion-label {
+    padding-bottom: 0.5rem;
+  }
+
+  .input-group {
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  ion-searchbar {
+    --ion-background-color: #1f1f1f;
+    padding: 0;
+    color: var(--ion-text-color);
+  }
+
+  ion-radio {
+    margin-top: 0.25rem;
+  }
+}
+
+
+

@@ -7,13 +7,14 @@ import {mergeMap, Observable, of} from "rxjs";
 import {NgStyle} from "@angular/common";
 import {NotificationService} from "../../service/notification/notification.service";
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
+import {SnowForecastComponent} from "../snow-forecast/snow-forecast.component";
 
 @Component({
   selector: 'app-day',
   templateUrl: './day.component.html',
   styleUrls: ['./day.component.scss'],
   standalone: true,
-  imports: [IonHeader, IonToolbar, IonTitle, IonButtons, IonBackButton, LineBreakPipe, IonButton, NgStyle],
+  imports: [IonHeader, IonToolbar, IonTitle, IonButtons, IonBackButton, LineBreakPipe, IonButton, NgStyle, SnowForecastComponent],
 
 })
 export class DayComponent implements OnInit {
@@ -48,16 +49,14 @@ export class DayComponent implements OnInit {
           return this.contentService.getDayGedicht(this.dayNumber)
         } else if (type == ContentType.Raetsel) {
           return this.contentService.getDayRaetsel(this.dayNumber)
-        }
-        else if (type == ContentType.Rezept) {
+        } else if (type == ContentType.Rezept) {
           return this.contentService.getDayRezept(this.dayNumber)
-        }
-        else if (type == ContentType.Video) {
+        } else if (type == ContentType.Video) {
           return this.contentService.getDayVideo(this.dayNumber)
         }
         return of()
       })
-    ).subscribe((res: Raetsel | Gedicht | Rezept | Video|  undefined) => {
+    ).subscribe((res: Raetsel | Gedicht | Rezept | Video | undefined) => {
       if (this.type == ContentType.Raetsel) {
         this.raetsel = res as Raetsel;
       } else if (this.type == ContentType.Gedicht) {

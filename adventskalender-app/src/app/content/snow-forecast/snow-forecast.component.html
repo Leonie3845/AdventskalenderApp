@@ -1,0 +1,88 @@
+<h1>Wetter Prognose für die Weihnachtstage in {{ formValue().name }} am {{formValue().date}}</h1>
+
+
+<div class="chart-container">
+  <div #temperaturChartContainer>
+    @if (visibiltiyButtons().temp) {
+      <button (click)="drawTemperturGraph()">
+        <img src="./assets/images/wetter/Thermometer.svg" alt="Tempertur anzeigen">
+        Temperatur
+      </button>
+    }
+
+  </div>
+
+  <div #sonnenstundenChartContainer>
+    @if (visibiltiyButtons().sonne) {
+      <button (click)="drawSonnestundenChart()">
+        <img src="./assets/images/wetter/sonne-export.svg" alt="Sonnenschein Stunden anzeigen">
+        Sonnenstunden
+      </button>
+    }
+  </div>
+
+  <div #niederschlagChartContainer>
+    @if (visibiltiyButtons().niederschlag) {
+      <button (click)="drawNiederschlagGraph()">
+        <img src="./assets/images/wetter/regen-export.svg" alt="Niederschlagswahrscheinlichkeit anzeigen">
+        Niederschlag
+      </button>
+    }
+  </div>
+
+  <div #schneehoeheChartContainer>
+    @if (visibiltiyButtons().schnee) {
+      <button (click)="drawSchneehoeheChart()">
+        <img src="./assets/images/wetter/Schneeflocke.svg" alt="Schneehöhe anzeigen">
+        Neuschneehöhe
+      </button>
+    }
+  </div>
+
+
+</div>
+
+<ion-fab slot="fixed" vertical="bottom" horizontal="end">
+  <ion-fab-button id="click-trigger-popup" aria-label="Nach anderem Ort suchen" (click)="popUpOpenFormDialog = true">
+    <ion-icon name="settings"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+<ion-popover
+  #popover [isOpen]="popUpOpenFormDialog" (didDismiss)="popUpOpenFormDialog = false"
+             size="auto">
+  <ng-template>
+    <form [formGroup]="cityForm">
+      <h2>Ort und Tag wählen</h2>
+      <div class="input-group">
+        <ion-label>Wähle den Tag</ion-label>
+        <br/>
+        <ion-radio-group [value]="weatherForcastRange()[0]" formControlName="date">
+          <ion-radio [value]="weatherForcastRange()[0]" labelPlacement="end">Weihnachten</ion-radio>
+          <br/>
+          <ion-radio [value]="weatherForcastRange()[1]" labelPlacement="end">1. Weihnachtsfeiertag</ion-radio>
+          <br/>
+          <ion-radio [value]="weatherForcastRange()[2]" labelPlacement="end">2. Weihnachtsfeiertag</ion-radio>
+          <br/>
+        </ion-radio-group>
+      </div>
+      <div class="input-group">
+        <ion-label>Suche nach deinem Ort</ion-label>
+        <ion-searchbar placeholder="Ort eingeben.." formControlName="name" required="true"
+                       [debounce]="1000"
+                       (ionInput)="searchForCity()"></ion-searchbar>
+        @if (searching()) {
+          <ion-list>
+            @for (item of cities; track item; let index = $index) {
+              <ion-item (click)="selectItem(item)">
+                <ion-label>{{ item.name }} ({{ item.country }} - {{ item.admin1 }})</ion-label>
+              </ion-item>
+            }
+          </ion-list>
+        }
+      </div>
+      <ion-button (click)="auswahlUebernehmen()">Auswahl übernehmen</ion-button>
+    </form>
+  </ng-template>
+
+</ion-popover>
