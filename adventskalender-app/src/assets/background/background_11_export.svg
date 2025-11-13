@@ -14,35 +14,35 @@
   <g
      id="layer1">
     <ellipse
-       style="fill:#13caee;fill-opacity:0.484029;fill-rule:evenodd;stroke:#009856;stroke-width:0.366663;stroke-dasharray:none;stroke-opacity:0.974202"
+       style="fill:rgba(0,227,255,0.58);fill-opacity:0.484029;fill-rule:evenodd;stroke:#2ab6d5;stroke-width:0.366663;stroke-dasharray:none;stroke-opacity:0.974202"
        id="path10"
        cx="105.06122"
        cy="126.27551"
        rx="78.884079"
        ry="80.298378" />
     <ellipse
-       style="fill:#13ee92;fill-opacity:0.484029;fill-rule:evenodd;stroke:#00983a;stroke-width:0.414675;stroke-dasharray:none;stroke-opacity:0.974202"
+       style="fill:rgba(0,255,143,0.53);fill-opacity:0.484029;fill-rule:evenodd;stroke:#00983a;stroke-width:0.414675;stroke-dasharray:none;stroke-opacity:0.974202"
        id="path11"
        cx="76.775505"
        cy="219.82039"
        rx="65.1213"
        ry="69.162132" />
     <ellipse
-       style="fill:#1350ee;fill-opacity:0.484029;fill-rule:evenodd;stroke:#000698;stroke-width:0.408483;stroke-dasharray:none;stroke-opacity:0.974202"
+       style="fill:rgba(19,80,238,0.42);fill-opacity:0.484029;fill-rule:evenodd;stroke:#000698;stroke-width:0.408483;stroke-dasharray:none;stroke-opacity:0.974202"
        id="path12"
        cx="52.12653"
        cy="42.832653"
        rx="34.818275"
        ry="32.797871" />
     <ellipse
-       style="fill:#13adee;fill-opacity:0.484029;fill-rule:evenodd;stroke:#008898;stroke-width:0.542999;stroke-dasharray:none;stroke-opacity:0.974202"
+       style="fill:rgba(19,173,238,0.54);fill-opacity:0.484029;fill-rule:evenodd;stroke:#008898;stroke-width:0.542999;stroke-dasharray:none;stroke-opacity:0.974202"
        id="path13"
        cx="154.9653"
        cy="212.14284"
        rx="41.822445"
        ry="40.004082" />
     <ellipse
-       style="fill:#13eeb6;fill-opacity:0.484029;fill-rule:evenodd;stroke:#009884;stroke-width:0.542999;stroke-dasharray:none;stroke-opacity:0.974202"
+       style="fill:rgba(19,238,182,0.52);fill-opacity:0.484029;fill-rule:evenodd;stroke:#009884;stroke-width:0.542999;stroke-dasharray:none;stroke-opacity:0.974202"
        id="path14"
        cx="153.55103"
        cy="56.773468"

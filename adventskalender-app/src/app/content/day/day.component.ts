@@ -1,9 +1,20 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {ContentService, ContentType, Gedicht, Raetsel, Rezept, Video} from "../../service/content/content.service";
+import {
+  ContentService,
+  ContentType,
+  ContentTypeMap,
+  Gedicht,
+  Podcast,
+  Raetsel,
+  Rezept,
+  Str8ts,
+  Video,
+  WithBackground
+} from "../../service/content/content.service";
 import {IonBackButton, IonButton, IonButtons, IonHeader, IonTitle, IonToolbar} from "@ionic/angular/standalone";
 import {LineBreakPipe} from "../../pipes/line-break-pipe";
-import {mergeMap, Observable, of} from "rxjs";
+import {mergeMap, of} from "rxjs";
 import {NgStyle} from "@angular/common";
 import {NotificationService} from "../../service/notification/notification.service";
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
@@ -24,6 +35,7 @@ export class DayComponent implements OnInit {
   raetsel?: Raetsel;
   rezept?: Rezept;
   video?: Video;
+  podcast?: Podcast;
   backgroundImage?: string;
   backgroundPosition: string = 'center';
   type: ContentType = ContentType.Gedicht;
@@ -43,41 +55,42 @@ export class DayComponent implements OnInit {
         this.dayNumber = Number(params.get('id'));
         return this.contentService.getTypeOfDay(this.dayNumber)
       }),
-      mergeMap((type: ContentType): Observable<Gedicht | Raetsel | Rezept | Video | undefined> => {
-        this.type = type
-        if (type == ContentType.Gedicht) {
-          return this.contentService.getDayGedicht(this.dayNumber)
-        } else if (type == ContentType.Raetsel) {
-          return this.contentService.getDayRaetsel(this.dayNumber)
-        } else if (type == ContentType.Rezept) {
-          return this.contentService.getDayRezept(this.dayNumber)
-        } else if (type == ContentType.Video) {
-          return this.contentService.getDayVideo(this.dayNumber)
+      mergeMap((type: ContentType)=> {
+        this.type = type;
+        if (this.type == ContentType.Snowforcast) {
+          return of();
         }
-        return of()
+        return this.contentService.getDayContent(type as keyof ContentTypeMap, this.dayNumber);
       })
-    ).subscribe((res: Raetsel | Gedicht | Rezept | Video | undefined) => {
-      if (this.type == ContentType.Raetsel) {
-        this.raetsel = res as Raetsel;
-      } else if (this.type == ContentType.Gedicht) {
-        this.gedicht = res as Gedicht;
-        this.backgroundImage = this.gedicht.background_path;
-        this.backgroundPosition = this.gedicht.background_position ?? this.backgroundPosition;
-      } else if (this.type == ContentType.Rezept) {
-        this.rezept = res as Rezept;
-        this.backgroundImage = this.rezept.background_path;
-        this.backgroundPosition = this.rezept.background_position ?? this.backgroundPosition;
-      } else if (this.type == ContentType.Video) {
-        this.video = res as Video;
-        this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.video!.embedded_video);
-        this.backgroundImage = this.video.background_path;
-        this.backgroundPosition = this.video.background_position ?? this.backgroundPosition;
-      }
-    })
+    ).subscribe(content => this.handleContent(content));
 
     //cancel notification for this day
     this.notificationService.cancelDayNotification(this.dayNumber);
 
+  }
+
+
+  private handleContent(content: Gedicht | Raetsel | Rezept | Video | Str8ts | Podcast) {
+    if ('frage' in content) {
+      this.raetsel = content;
+    } else {
+      const c = content as WithBackground;
+      this.backgroundImage = c.background_path;
+      this.backgroundPosition = c.background_position ?? this.backgroundPosition;
+
+      if ('gedicht' in content) {
+        this.gedicht = content;
+      } else if ('zutaten' in content) {
+        this.rezept = content;
+      } else if ('embedded_video' in content) {
+        this.video = content;
+        this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(content.embedded_video);
+      } else if ('podcast_link' in content) {
+        this.podcast = content;
+        this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(content.podcast_link);
+
+      }
+    }
   }
 
   protected readonly ContentType = ContentType;

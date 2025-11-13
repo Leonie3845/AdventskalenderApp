@@ -11,18 +11,33 @@
   min-height: 100%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
 
+  .rezept-p {
+    text-align: left;
+
+  }
+
+  #zutaten-p, #gedicht {
+    line-height: 1.5em;
+  }
+
+  .small-text {
+    font-size: 0.75em;
+    font-style: italic;
+    padding-top: 2em;
+    text-align: right;
+    align-self: flex-end;
+  }
 }
+
 
 #autor {
   font-size: 0.75em;
   font-style: italic;
   padding-top: 2em;
   text-align: right;
-}
-
-#gedicht {
-  line-height: 1.5em;
 }
 
 .titel {
