@@ -1,10 +1,11 @@
 
 let dev: boolean = false; //set to true during development
-export function getDateToday() : number {
+export function isDayOpen(dayToBeAccessed: number) : boolean {
   if (dev) {
-    return 24 //for testing
+    return true //for testing
   }
-  return new Date().getDate(); //for actual execution
+
+  return new Date().getMonth() == 11 && new Date().getDate() >= dayToBeAccessed;
 
 
 

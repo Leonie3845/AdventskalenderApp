@@ -42,6 +42,14 @@ jobs:
         run: ionic cap add android
         working-directory: ./adventskalender-app
 
+      - name: Generate App Icons and Splash Screens
+        run: npx capacitor-assets generate
+        working-directory: ./adventskalender-app
+
+      - name: Debug icons
+        run: ls -R android/app/src/main/res/mipmap-*
+        working-directory: ./adventskalender-app
+
       - name: Build Android Dev APK
         run: ionic capacitor build android
         working-directory: ./adventskalender-app
