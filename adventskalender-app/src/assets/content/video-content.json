@@ -1,27 +1,34 @@
 {
   "4": {
-    "titel": "Bob Ross Painting Tutorial",
-    "beschreibung": "Suchst du noch eine Beschäftigung für lange dunkle Winterabende?",
-    "embedded_video": "https://www.youtube.com/embed/mT0RNrTDHkI?si=cuMmZZDDL2j7JLIp",
+    "titel": "Tolle Chor Musik: Hela Rotan",
+    "beschreibung": "Gefällt dir was du siehst und hörst? Am Samstag, den 18.07.2026 kannst du das Lied Live beim Chorauftritt von Leonie sehen! (Also merk dir am besten den Termin schon mal im Kalender vor \uD83D\uDE09)",
+    "embedded_video": "https://www.youtube.com/embed/SMf_WwBWPYs?si=PhrKFjG9qhXvdGFy",
     "background_path": "assets/background/background_16_export.svg",
-    "background_position": "right"
+    "background_position": "right",
+    "remark": "P.S.: Keine Garantie das unsere Performance beim Auftritt genauso toll wird.."
   },
-  "9": {
-    "titel": "Schneeflocke falten",
-    "beschreibung": "Suchst du noch eine Beschäftigung für lange dunkle Winterabende?",
-    "embedded_video": "https://www.youtube.com/embed/gd16lzklXUM?si=FlagGNA4Eyd-GoOT",
-    "background_path": "assets/background/background_7_export.svg"
-  },
-  "17": {
-    "titel": "Fröbel Sterne basteln",
-    "beschreibung": "Suchst du noch eine Beschäftigung für lange dunkle Winterabende?",
-    "embedded_video": "https://www.youtube.com/embed/XSD1NHYCCgc?si=IjreFupXqqW8kWUc",
-    "background_path": "assets/background/background_4_export.svg"
+  "13": {
+    "titel": "Mehr tolle Chor Musik: Father Thunder",
+    "beschreibung": "Eines meiner bisherigen Lieblingschorstücke. Besonders gut geeignet als Schlecht-wetter Soundtrack.",
+    "embedded_video": "https://www.youtube.com/embed/7nyodsrtaSQ?si=zS9yReX4i4mSIQXF",
+    "background_path": "assets/background/background_14_export.svg"
   },
   "19": {
+    "titel": "Ein bisschen Self Care \ud83c\udf40",
+    "beschreibung": "Heute gibt es ein Yoga Tutorial, um Entspannung zu finden und einen Moment der Ruhe. Also Matte ausrollen und los gehts! \n\n Viel Spaß \uD83D\uDE42!",
+    "embedded_video": "https://www.youtube.com/embed/cb5Yq6_jW4o?si=z6oBrQocYQ_Z7Aib",
+    "background_path": "assets/background/background_13_export.svg"
+  },
+  "21": {
     "titel": "Blumen Pop-Up Karte basteln",
     "beschreibung": "Suchst du noch eine Beschäftigung für lange dunkle Winterabende?",
     "embedded_video": "https://www.youtube.com/embed/a2rxjPPIwkI?si=tBkOj3J2nczreTQr",
     "background_path": "assets/background/background_3_export.svg"
+  },
+  "23": {
+    "titel": "Workout \ud83d\udcaa",
+    "beschreibung": "Zeit sich zu bewegen!",
+    "embedded_video": "https://www.youtube.com/embed/IMctZ4i2FRw?si=0HDs_22bJIVa6W8C",
+    "background_path": "assets/background/background_17_export.svg"
   }
 }

@@ -209,7 +209,7 @@ export class SnowForecastComponent implements OnInit {
       .attr('x', width / 2)
       .attr('y', 20) // 100 + radius (50) + 20 for spacing
       .attr('text-anchor', 'middle')
-      .attr('font-size', '1em')
+      .attr('font-size', '1rem')
       .style('fill', '#ffffff')
       .text(title);
 
@@ -221,8 +221,7 @@ export class SnowForecastComponent implements OnInit {
     // Add the y-axis.
     svg.append("g")
       .attr("transform", `translate(${marginLeft},0)`)
-      .call(d3.axisLeft(y));
-
+      .call(d3.axisLeft(y).tickValues(y.ticks().filter((d, i) => i % 2 === 0))) // keep every 2nd tick)
 
     // Add a rect for each bar.
     svg.append("g")

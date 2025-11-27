@@ -19,7 +19,7 @@
     @if (this.type == ContentType.Gedicht) {
       <h1 class="titel"> {{ gedicht?.titel }}</h1>
       <p [innerHTML]="(gedicht?.gedicht ? gedicht!.gedicht : '') | lineBreak" id="gedicht"></p>
-      <p id="autor"> {{ gedicht?.autor }}</p>
+      <p class="small-text"> {{ gedicht?.autor }}</p>
     } @else if (this.type == ContentType.Raetsel) {
       <h1 class="titel"> Ein kleines Streichholz Rätsel</h1>
       <p [innerHTML]="(raetsel?.frage ? raetsel!.frage : '')   | lineBreak"></p>
@@ -36,19 +36,48 @@
     } @else if (this.type == ContentType.Rezept) {
       <h1 class="titel">{{ this.rezept?.titel }}</h1>
       <h2>Zutaten:</h2>
-      <p [innerHTML]="(rezept?.zutaten ? rezept!.zutaten : '')   | lineBreak"></p>
+      <p class="rezept-p" id="zutaten-p" [innerHTML]="(rezept?.zutaten ? rezept!.zutaten : '')   | lineBreak"></p>
       <h2>Zubereitung:</h2>
-      <p [innerHTML]="(rezept?.zubereitung ? rezept!.zubereitung : '')   | lineBreak"></p>
+      <p class="rezept-p" [innerHTML]="(rezept?.zubereitung ? rezept!.zubereitung : '')   | lineBreak"></p>
       <a [href]="rezept?.link">Externer Link: Orginales Rezept</a>
+      <p class="small-text">P.S.: Leonie freut sich sehr wenn sie die fertigen Plätzchen probieren darf 😜</p>
+
 
     } @else if (this.type == ContentType.Video) {
-      <h1 class="titel">{{ this.video?.titel }}</h1>
+      <h1 class="titel">{{ this.video?.titel }} </h1>
       <p>{{ this.video?.beschreibung }}</p>
       <iframe width="100%" height="100%" [src]="this.safeUrl" title="YouTube video player" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      @if (this.video?.remark) {
+        <p class="small-text">{{ this.video!.remark }}</p>
+      }
+
     } @else if (this.type == ContentType.Snowforcast) {
       <app-snow-forecast></app-snow-forecast>
+    } @else if (this.type == ContentType.St8ts) {
+      <h1>Str8ts Rätsel🤔</h1>
+      <p>Str8ts sind die besseren Sodokus!<br> <br>
+        Kennst du die <a href="https://www.str8ts.de/anleitung/spielregeln-und-tipps">Regeln</a> schon?
+        <br> <br> Für alle ist was dabei! Bist du noch Str8ts Neuling, gibt es für heute ein <a
+          href="https://www.str8ts.de/str8ts-online-spielen/str8ts-asymmetrisch">einfaches Str8ts</a>.
+        <br> Bist du schon Profi? Dann bekommst du heute ein <a href="https://www.str8ts.com/weekly_str8ts.aspx">teuflisches
+          Str8ts</a>.
+        <br> <br>
+        Viel Spaß beim Knobeln!
+      </p>
+      <p class="small-text">@Clara, kennst du schon die <a href="https://www.str8ts.com/Setti">Setti-Strategie</a>?</p>
+    } @else if (this.type == ContentType.Podcast) {
+      <h1>{{ this.podcast?.title }}</h1>
+      <p>{{ this.podcast?.beschreibung }}</p>
+      <!--
+            Note: this link will not work in the browser, because embedded deeplinks are usually disabled by default.
+            It works on an android device.
+      -->
+      <a [href]="safeUrl">Spotify Folge öffenen.</a>
+      @if (this.podcast?.remark) {
+        <p class="small-text">{{ this.podcast!.remark }}</p>
+      }
     }
 
 

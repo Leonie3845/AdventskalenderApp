@@ -18,13 +18,18 @@
     "autor": "Matthias Wermke und Mischa Leinkauf",
     "background_path": "assets/background/background_5_export.svg",
     "background_position": "right"
-
-
   },
   "14": {
     "titel": "Der Nussknacker",
     "gedicht": " Wer knackt die Nuss?\nNicht der Fritz, nicht der Franz.\nWer kriegt sie entzwei?\nDer Nussknacker kann’s!\n\nGut, dass wir ihn haben,\nden hölzernen Herrn.\nEr zerbeißt die Schale\nund schenkt uns den Kern.",
     "autor": "Josef Guggenmos",
+    "background_path": "assets/background/background_12_export.svg"
+
+  },
+  "20" : {
+    "titel": "Wenn es Winter wird",
+    "gedicht": "Der See hat eine Haut bekommen,\nso dass man fast drauf gehen kann,\nund kommt ein großer Fisch geschwommen,\nso stößt er mit der Nase an.\nUnd nimmst du einen Kieselstein\nund wirfst ihn drauf, so macht es klirr\nund titscher - titscher - titscher - dirr . . .\nHeißa, du lustiger Kieselstein!\nEr zwitschert wie ein Vögelein\nund tut als wie ein Schwälblein fliegen -\ndoch endlich bleibt mein Kieselstein\nganz weit, ganz weit auf dem See draußen liegen.\n\n\n\nDa kommen die Fische haufenweis\nund schaun durch das klare Fenster von Eis\nund denken, der Stein wär etwas zum Essen;\ndoch sosehr sie die Nase ans Eis auch pressen,\ndas Eis ist zu dick, das Eis ist zu alt,\nsie machen sich nur die Nasen kalt.\nAber bald, aber bald\nwerden wir selbst auf eignen Sohlen\nhinausgehn können und den Stein wiederholen.",
+    "autor": "Christian Morgenstern",
     "background_path": "assets/background/background_12_export.svg"
 
   }

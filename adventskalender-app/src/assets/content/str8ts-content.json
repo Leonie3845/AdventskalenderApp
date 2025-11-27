@@ -1,0 +1,14 @@
+{
+  "5": {
+    "background_path": "assets/background/background_8_export.svg",
+    "background_position": "right"
+  },
+  "16": {
+    "background_path": "assets/background/background_9_export.svg",
+    "background_position": "right"
+  },
+  "24": {
+    "background_path": "assets/background/background_11_export.svg",
+    "background_position": "right"
+  }
+}

@@ -23,14 +23,7 @@ export class WeatherService {
     const response = responses[0];
 
 // Attributes for timezone and location
-    const elevation = response.elevation();
     const utcOffsetSeconds = response.utcOffsetSeconds();
-
-    console.log(
-      `\nCoordinates: ${latitude}°N ${longitude}°E`,
-      `\nElevation: ${elevation}m asl`,
-      `\nTimezone difference to GMT+0: ${utcOffsetSeconds}s`,
-    );
 
     const hourly = response.hourly()!;
     const daily = response.daily()!;
@@ -62,8 +55,6 @@ export class WeatherService {
     };
 
 // 'weatherData' now contains a simple structure with arrays with datetime and weather data
-    console.log("\nHourly data", weatherData.hourly)
-    console.log("\nDaily data", weatherData.daily)
     return weatherData;
 
 
