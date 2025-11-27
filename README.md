@@ -38,3 +38,23 @@ cd android
 
 ````
 This will create ``android/app/build/outputs/apk/debug/app-debug.apk``
+
+
+## How to install it on android phone in dev mode
+
+
+Hallo du Glücklicher Mensch! 
+Der ultimative Leonie'sche Advendskalender ist da. Freust du dich auch schon so sehr wie ich?🤩🎄
+
+
+Um die App zu installieren musst du in den Einstellungen das Installieren unbekannter Apps über Whatsapp erlauben. Dafür navigierst du:
+
+Einstellungen → Apps → Spezieller App-Zugriff → Installieren Unbekannter Apps → Whatsapp auswählen und dort auf Dieser Quelle Vertrauen auswählen.
+
+Dannach die app-debug.apk Datei herunterladen (indem du sie im Whatsapp chat anklickst), die Datei dann erneut anklicken → bei "Mit Packetinstallation öffenen" nur diesmal auswählen
+
+Im Dialog "Möchtest du diese App Installieren?" → Installieren klicken.
+Im Dialog "App-Scan empfohlen" → App Scannen klicken. Kurz warten → Installieren klicken.
+
+
+Dannach ist die Adventskalender App installiert. Du kannst sie als Test direkt einmal öffnen. Viel Spaß!🎁

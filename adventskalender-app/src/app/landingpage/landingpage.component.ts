@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, ElementRef, inject} from '@angular/core';
 import {Router} from "@angular/router";
 import {IonContent, IonHeader, IonTitle, IonToast, IonToolbar} from "@ionic/angular/standalone";
-import {getDateToday} from "../shared/dev-date-change";
+import {isDayOpen} from "../shared/dev-date-change";
 
 
 @Component({
@@ -30,7 +30,6 @@ export class LandingpageComponent implements AfterViewInit {
     const paths = this.el.nativeElement.querySelectorAll('svg path[id]');
     paths.forEach((path: SVGPathElement) => {
       const id = path.getAttribute('id');
-      const today = getDateToday();
       if (id) {
         let day: number = 0;
         if (id.startsWith("path_n_")) {
@@ -38,8 +37,8 @@ export class LandingpageComponent implements AfterViewInit {
         } else if (id.startsWith("path-")) {
           day = id.split("path-")[1] as unknown as number;
         }
-        //add styling
-        if (day > today) {
+        //doors where access is not allowed
+        if (!isDayOpen(day)) {
           path.addEventListener('click', () => {
             this.isAlertOpen = true;
             this.dayClicked = day;
@@ -47,7 +46,7 @@ export class LandingpageComponent implements AfterViewInit {
         }
 
         //add interactivity
-        if (day <= today) {
+        if (isDayOpen(day)) {
           path.addEventListener('click', () => {
             this.router.navigate([`/${day}`]);
 
